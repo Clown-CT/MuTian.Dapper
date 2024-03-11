@@ -9,6 +9,6 @@ namespace MuTian.Dapper
     public class ConnectionSettings
     {
         public DatabaseType DatabaseType { get; set; }
-        public required string ConnectionString { get; set; }
+        public string ConnectionString { get; set; }
     }
 }

@@ -3,27 +3,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MuTian.Dapper.Extesions;
 using MuTian.Dapper.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MuTian.Dapper.Test
 {
     public class DapperClientTest
     {
-        IConfiguration Configuration { get; }
 
-        IServiceProvider ServiceProvider { get; }
+        private IServiceProvider ServiceProvider { get; }
         public DapperClientTest()
         {
-            Configuration = new ConfigurationBuilder()
+            var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true).Build();
             ServiceCollection services = new ServiceCollection();
