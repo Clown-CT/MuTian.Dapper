@@ -1,0 +1,6 @@
+@MuTian.Dapper.ApiTest_HostAddress = http://localhost:5289
+
+GET {{MuTian.Dapper.ApiTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
