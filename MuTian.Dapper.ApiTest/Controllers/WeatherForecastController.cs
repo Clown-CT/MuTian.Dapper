@@ -24,7 +24,7 @@ namespace MuTian.Dapper.ApiTest.Controllers
         public IDapperClient<TenantDbConnectionHandler> DapperClient { get; }
 
         [HttpPost]
-        [ServiceFilter(typeof(TenantConnectionActionFilterAttribute))]
+        [ServiceFilter(typeof(TenantConnectionResourceFilterAttribute))]
         public IEnumerable<WeatherForecast> Get([FromBody] Tenant tenant)
         {
             var DataTable = DapperClient.ExecuteDataTable("select * from users");

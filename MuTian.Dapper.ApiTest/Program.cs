@@ -15,7 +15,7 @@ builder.Services.AddTransient(typeof(IDapperClient<>), typeof(DapperClient<>));
 builder.Services.AddTransient<IDapperSqlServerClient, DapperSqlServerClient>();
 builder.Services.AddTransient(typeof(IDapperSqlServerClient<>), typeof(DapperSqlServerClient<>));
 builder.Services.AddScoped<TenantDbConnectionHandler>();
-builder.Services.AddTransient<TenantConnectionActionFilterAttribute>();
+builder.Services.AddTransient<TenantConnectionResourceFilterAttribute>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
