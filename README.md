@@ -9,7 +9,6 @@ builder.Services.AddTransient<IDapperClient, DapperClient>();
 builder.Services.AddTransient(typeof(IDapperClient<>), typeof(DapperClient<>));
 builder.Services.AddTransient<IDapperSqlServerClient, DapperSqlServerClient>();
 builder.Services.AddTransient(typeof(IDapperSqlServerClient<>), typeof(DapperSqlServerClient<>));
-builder.Services.AddScoped<TenantDbConnectionHandler>();
 
 IDapperClient dapperClient;
 dapperClient = ServiceProvider.GetRequiredService<IDapperSqlServerClient>();
