@@ -2,6 +2,8 @@
 
 The project is to provide a simple extension to dapper, combining IOC and filters, and support for tenant database switching
 
+**You can use nuget to search for the MuTian.Dapper package to use**
+
 ## Examples:
 
 ```csharp
